@@ -29,7 +29,7 @@
                   <v-row>
                     <v-col cols="12" sm="6" md="4">
                       <v-text-field
-                        v-model="editedItem.name"
+                        v-model="editedItem.airline"
                         label="Airline name"
                       ></v-text-field>
                     </v-col>
@@ -93,6 +93,7 @@
         </v-btn>
       </template>
     </v-data-table>
+   
   </v-container>
 </template>
 <script>
@@ -134,6 +135,7 @@ export default {
 
   watch: {
     dialog(val) {
+      console.log(val);
       val || this.close();
     },
     dialogDelete(val) {
@@ -227,7 +229,7 @@ export default {
         },
         {
           _id: "63e34c2e87ade911bd0cbd76",
-          name: "AJITHA",
+          name: "AJIT",
           trips: 345,
           airline: [
             {
@@ -380,7 +382,7 @@ export default {
 
     save() {
       if (this.editedIndex > -1) {
-        Object.assign(this.desserts[this.editedIndex], this.editedItem);
+        Object.assign(this.passengers[this.editedIndex], this.editedItem);
       } else {
         this.passengers.push(this.editedItem);
       }
