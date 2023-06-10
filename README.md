@@ -3,7 +3,7 @@
 
 Follow the steps mentioned below to setup the project:
 
-* git clone <repository-link>
+* git clone repository-link
  
 * composer install 
 
